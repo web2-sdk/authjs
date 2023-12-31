@@ -1,0 +1,8 @@
+{
+  "name": "@web2-sdk/auth.js",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/web2-sdk/authjs.git",
+  "author": "web2-sdk <wh0.web2sdkteam@gmail.com>",
+  "license": "AGPL-3.0"
+}
