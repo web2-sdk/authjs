@@ -22,7 +22,7 @@ git clone https://github.com/web2-sdk/authjs.git ./__build__/
 cd ./__build__/
 
 yarn install
-yarn build
+yarn build:no-fix && NODE_ENV=production node post-build.js
 
 rm -rf ./node_modules/
 rm -rf ./src/

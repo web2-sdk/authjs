@@ -50,6 +50,10 @@ async function recursiveRemoveUnnecessaryFiles(dir) {
 async function main() {
 //   await recursiveRemoveDirectoryFiles(path.join(buildDir, 'types'));
   await recursiveRemoveUnnecessaryFiles(buildDir);
+  
+  if(process.env.NODE_ENV === 'production') {
+    await recursiveRemoveDirectoryFiles(path.join(process.cwd(), '.vscode'));
+  }
 }
 
 main().catch(console.error);
