@@ -129,4 +129,5 @@ dist
 !.vscode/settings.json
 /src/test.ts
 
-# .husky/**/*
+.husky/**/*
+*.tmp

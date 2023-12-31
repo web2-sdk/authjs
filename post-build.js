@@ -1,7 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const path = require('node:path');
+/* eslint-disable */
+/* eslint-enable semi, indent */
+"use strict";
 
-// eslint-disable-next-line @typescript-eslint/no-var-requires
+const path = require('node:path');
 const fs = require('node:fs');
 
 const buildDir = path.resolve(process.cwd(), 'dist');

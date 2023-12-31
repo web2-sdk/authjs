@@ -10,6 +10,15 @@
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "web2-sdk",
+    "auth",
+    "authjs",
+    "web-auth"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.7",

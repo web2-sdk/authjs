@@ -4,5 +4,14 @@
   "main": "index.js",
   "repository": "https://github.com/web2-sdk/authjs.git",
   "author": "web2-sdk <wh0.web2sdkteam@gmail.com>",
-  "license": "AGPL-3.0"
+  "license": "AGPL-3.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "web2-sdk",
+    "auth",
+    "authjs",
+    "web-auth"
+  ]
 }
