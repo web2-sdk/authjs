@@ -1,0 +1,15 @@
+##############################
+# Core EditorConfig Options  #
+##############################
+root = true
+
+
+# All files
+[*]
+
+# Set default indent style
+indent_style = space
+# Set default indent size
+indent_size = 2
+# Set default charset
+charset = utf-8

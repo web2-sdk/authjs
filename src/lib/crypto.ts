@@ -13,10 +13,10 @@ export class Crypto {
     let arr: Uint8Array;
 
     if(ssrSafeWindow) {
-      arr = ssrSafeWindow.crypto.getRandomValues(new Uint8Array(byteLength));
+      arr = crypto.getRandomValues(new Uint8Array(byteLength));
     } else {
       const __crypto = await import('crypto');
-      arr = new Uint8Array(__crypto.randomBytes(byteLength));
+      arr = Uint8Array.from(__crypto.randomBytes(byteLength));
     }
 
     return Array.prototype.map.call(arr, function(byte) {
@@ -34,7 +34,7 @@ export class Crypto {
     if(ssrSafeWindow) return ssrSafeWindow.crypto.getRandomValues(new Uint8Array(length));
 
     const __crypto = await import('crypto');
-    return new Uint8Array(__crypto.randomBytes(length));
+    return Uint8Array.from(__crypto.randomBytes(length));
   }
   
   /**
