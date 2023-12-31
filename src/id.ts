@@ -70,7 +70,7 @@ export const validateShortId = (id: string): boolean => (
  * @param {string} id The UUID to validate 
  * @returns {boolean} True if the UUID is valid, false otherwise
  */
-export const validateUuid = (id: string) => (
+export const validateUuid = (id: string): boolean => (
   typeof id === 'string' &&
   (uuidWithDashesPattern.test(id) || uuidWithoutDashesPattern.test(id))
 );
@@ -82,7 +82,7 @@ export const validateUuid = (id: string) => (
  * @param {string} id The UUID to validate 
  * @returns {boolean} True if the UUID is valid, false otherwise
  */
-export const validateUuidWithDashes = (id: string) => (
+export const validateUuidWithDashes = (id: string): boolean => (
   typeof id === 'string' &&
   uuidWithDashesPattern.test(id)
 );
@@ -94,7 +94,7 @@ export const validateUuidWithDashes = (id: string) => (
  * @param {string} id The UUID to validate 
  * @returns {boolean} True if the UUID is valid, false otherwise
  */
-export const validateUuidWithoutDashes = (id: string) => (
+export const validateUuidWithoutDashes = (id: string): boolean => (
   typeof id === 'string' &&
   uuidWithoutDashesPattern.test(id)
 );

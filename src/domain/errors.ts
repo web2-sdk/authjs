@@ -48,4 +48,13 @@ export class InvalidIPAddress extends Exception {
   }
 }
 
+
+export class AuthError extends Exception {
+  public override readonly name = 'AuthError' as const;
+  
+  constructor(message: string, statusCode: number, type: string, context?: Dict<any>) {
+    super(message, { ...context, statusCode, type });
+  }
+}
+
 export default Exception;

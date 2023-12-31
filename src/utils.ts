@@ -309,3 +309,10 @@ export function convertUint8ArrayToHex(arr: Uint8Array): string {
     return ('0' + byte.toString(16)).slice(-2);
   }).join('');
 }
+
+export function now(): number {
+  if(typeof performance !== 'undefined' &&
+    typeof performance.now === 'function') return performance.now();
+
+  return Date.now();
+}
