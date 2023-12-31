@@ -19,6 +19,13 @@
     "authjs",
     "web-auth"
   ],
+  "scripts": {
+    "build": "tsc --emitDeclarationOnly && babel src --extensions \".js,.ts\" --out-dir dist --copy-files --no-copy-ignored && node ./post-build.js",
+    "test:watch": "clear && tsnd -r tsconfig-paths/register --transpile-only --respawn --ignore-watch node_modules src/test.ts",
+    "hot": "tsc --noEmit && yarn build && clear && node ./dist/index.js && rm -rf ./dist/",
+    "test": "clear && yarn build && clear && node ./dist/test.js && rm -rf ./dist/",
+    "spec": "clear && tsc --noEmit && jest --verbose --runInBand"
+  },
   "devDependencies": {
     "@babel/cli": "^7.23.4",
     "@babel/core": "^7.23.7",
